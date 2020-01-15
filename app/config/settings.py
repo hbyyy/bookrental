@@ -24,19 +24,23 @@ SECRET_KEY = 't1+7#$s_#v^!*%6!yl(_#s!)9^lzxw-8&ik_np+gefy2l-)j=9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+AUTH_USER_MODEL = 'members.User'
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'members.apps.MembersConfig',
+    'books.apps.BooksConfig',
+    'rental.apps.RentalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
