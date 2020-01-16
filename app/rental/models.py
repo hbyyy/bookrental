@@ -8,7 +8,7 @@ from django.utils import timezone
 
 class Rental(models.Model):
     book = models.OneToOneField('books.Book', on_delete=models.CASCADE)
-    users = models.ForeignKey('members.User', on_delete=models.CASCADE)
+    user = models.ForeignKey('members.User', on_delete=models.CASCADE)
     start_date = models.DateTimeField(default=timezone.now)
     end_date = models.DateTimeField()
     is_extended = models.BooleanField(default=False)
